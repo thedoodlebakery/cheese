@@ -8,4 +8,13 @@ urlpatterns = (
         view=views.CheeseListView.as_view(),
         name='list'
     ),
+    url(
+        regex=r'^(?P<slug>[\w\-]+)/$',
+        view=views.CheeseDetailView.as_view(),
+        name='detail'
+    ),
+
+
 )
+
+# URL Pattern for the CheeseDetailView
